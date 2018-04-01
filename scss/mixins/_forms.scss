@@ -55,6 +55,7 @@
     .was-validated &:#{$state},
     &.is-#{$state} {
       border-color: $color;
+      box-shadow: 0 0 0 1px $color;
 
       &:focus {
         border-color: $color;
