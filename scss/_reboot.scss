@@ -63,6 +63,10 @@ section {
 // 3. Set an explicit initial text-align value so that we can later use the
 //    the `inherit` value on things like `<th>` elements.
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0; // 1
   font-family: $font-family-base;
@@ -71,10 +75,13 @@ body {
   line-height: $line-height-base;
   color: $body-color;
   text-align: left; // 3
-  // background: center/20% url("/noisy-texture-300x300-o6-d18-c-FCFAF2-t1@2x.png"),
-  // linear-gradient($bg-blue, $bg-tan 25%);
-  background: linear-gradient($bg-blue, $bg-tan 25%);
-  // background-repeat: repeat;
+  background: $bg-tan url("https://s3.amazonaws.com/tds-static/img/debtcollective/0.0.1/bg-tile.png");
+  background-repeat: repeat;
+  background-size: 20%;
+}
+
+.gradient-container {
+  background: linear-gradient($bg-blue, rgba(245, 245, 245, 0) 1000px);
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
